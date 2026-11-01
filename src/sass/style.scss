@@ -915,6 +915,12 @@ form {
 			line-height: 1.5;
 			margin-bottom: clamp(10px, 2vw, 20px);
 		}
+		.flipTimebox {
+			display: flex;
+			justify-content: center;
+			width: 100%;
+			margin: 0 !important;
+		}
 		.btn {
 			padding: 15px 20px;
 			background: $brand-white!important;
