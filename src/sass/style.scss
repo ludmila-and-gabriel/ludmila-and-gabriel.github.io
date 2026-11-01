@@ -1670,9 +1670,6 @@ form {
   width: 44px;
   z-index: 2001;
   border-bottom: none!important;
-  @media screen and (max-width: $screen-sm) {
-  	display: block;
-  }
 }
 
 // Buttons
