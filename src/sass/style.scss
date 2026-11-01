@@ -409,11 +409,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	.display-tc {
 		height: 100vh;
 		min-height: 600px;
-		display: table;
 		width: 100%;
-	}
-	.display-t {
-		table-layout: fixed;
 	}
 
 	&.fh5co-cover-sm {
@@ -899,8 +895,11 @@ form {
 #fh5co-counter,
 .fh5co-cover {
 	.display-tc {
-		display: table-cell!important;
-		vertical-align: middle;
+		display: flex!important;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
 		h1, h2 {
 			margin: 0;
 			padding: 0;
@@ -908,23 +907,26 @@ form {
 		}
 		h1 {
 			margin-top: clamp(15px, 3vw, 40px);
-			margin-bottom: calc(clamp(150px, 18vw, 320px) / 2 + clamp(10px, 2vw, 20px));
+			margin-bottom: calc(clamp(150px, 18vw, 320px) + clamp(40px, 6vw, 70px));
 			font-size: clamp(30px, 7vw, 100px);
 			line-height: 1.5;
 			font-family: $font-secondary;
 			overflow-wrap: break-word;
 		}
 		h2 {
-			font-size: clamp(16px, 2.2vw, 20px);
+			position: absolute;
+			left: 50%;
+			top: calc(50% + clamp(150px, 18vw, 320px) / 2 + clamp(8px, 1.5vw, 15px));
+			transform: translateX(-50%);
+			font-size: clamp(26px, calc(2.2vw + 10px), 30px);
 			line-height: 1.5;
-			margin-top: calc(clamp(150px, 18vw, 320px) / 2 + clamp(10px, 2vw, 20px));
-			margin-bottom: clamp(10px, 2vw, 20px);
+			white-space: nowrap;
 		}
 		.flipTimebox {
 			display: flex;
 			justify-content: center;
 			width: 100%;
-			margin: 0 !important;
+			margin: clamp(15px, 2vw, 25px) 0 0 !important;
 			.flip-clock-wrapper {
 				width: auto !important;
 				margin: 0 !important;
