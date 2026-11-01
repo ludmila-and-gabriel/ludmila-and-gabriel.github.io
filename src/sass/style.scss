@@ -919,8 +919,9 @@ form {
 			display: flex;
 			justify-content: center;
 			width: 100%;
-			margin: 0 !important;
+			margin: 20px 0 0 !important;
 			.flip-clock-wrapper {
+				width: auto !important;
 				margin: 0 !important;
 			}
 		}
