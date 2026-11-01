@@ -434,7 +434,11 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .header-photo {
-	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 5;
 	width: clamp(150px, 18vw, 320px);
 	height: clamp(150px, 18vw, 320px);
 	object-fit: cover;
@@ -903,8 +907,8 @@ form {
 			color: rgba(255,255,255,1);
 		}
 		h1 {
-			margin-top: clamp(30px, 6vw, 80px);
-			margin-bottom: clamp(10px, 2vw, 20px);
+			margin-top: clamp(15px, 3vw, 40px);
+			margin-bottom: calc(clamp(150px, 18vw, 320px) / 2 + clamp(10px, 2vw, 20px));
 			font-size: clamp(30px, 7vw, 100px);
 			line-height: 1.5;
 			font-family: $font-secondary;
@@ -913,13 +917,14 @@ form {
 		h2 {
 			font-size: clamp(16px, 2.2vw, 20px);
 			line-height: 1.5;
+			margin-top: calc(clamp(150px, 18vw, 320px) / 2 + clamp(10px, 2vw, 20px));
 			margin-bottom: clamp(10px, 2vw, 20px);
 		}
 		.flipTimebox {
 			display: flex;
 			justify-content: center;
 			width: 100%;
-			margin: 20px 0 0 !important;
+			margin: 0 !important;
 			.flip-clock-wrapper {
 				width: auto !important;
 				margin: 0 !important;
