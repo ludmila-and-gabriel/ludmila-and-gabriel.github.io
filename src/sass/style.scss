@@ -912,6 +912,10 @@ form {
 			line-height: 1.5;
 			font-family: $font-secondary;
 			overflow-wrap: break-word;
+			@media screen and (max-width: $screen-sm) {
+				margin-top: calc(clamp(15px, 3vw, 40px) + 55px);
+				margin-bottom: calc(clamp(150px, 18vw, 320px) + clamp(40px, 6vw, 70px) - 16px);
+			}
 		}
 		h2 {
 			position: absolute;
@@ -927,6 +931,9 @@ form {
 			justify-content: center;
 			width: 100%;
 			margin: clamp(15px, 2vw, 25px) 0 0 !important;
+			@media screen and (max-width: $screen-sm) {
+				margin: calc(clamp(50px, 10vw, 80px) + 55px) 0 0 !important;
+			}
 			.flip-clock-wrapper {
 				width: auto !important;
 				margin: 0 !important;
