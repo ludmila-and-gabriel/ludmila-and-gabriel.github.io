@@ -109,6 +109,32 @@
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 					<h2>Events</h2>
+					<a id="fh5co-add-to-calendar" class="fh5co-add-to-calendar" href="#">
+						<i class="icon-calendar"></i> Add to Calendar
+					</a>
+					<script>
+					(function() {
+						var ics = [
+							'BEGIN:VCALENDAR',
+							'VERSION:2.0',
+							'PRODID:-//Ludmila and Gabriel//Wedding//EN',
+							'BEGIN:VEVENT',
+							'UID:ludmila-gabriel-wedding-2027@ludmila-and-gabriel.github.io',
+							'DTSTAMP:20261101T000000Z',
+							'DTSTART:20270617T160000Z',
+							'DTEND:20270619T090000Z',
+							"SUMMARY:Wedding Ludmila & Gabriel",
+							"DESCRIPTION:Wedding weekend in La Garriga\\, Barcelona. Ceremony at Masia Ca N'Illa\\, stay at Hotel Blancafort Spa Termal.",
+							'LOCATION:La Garriga\\, Barcelona\\, Spain',
+							'END:VEVENT',
+							'END:VCALENDAR'
+						].join('\r\n');
+						var link = document.getElementById('fh5co-add-to-calendar');
+						if (link) {
+							link.setAttribute('href', 'data:text/calendar;charset=utf-8,' + encodeURIComponent(ics));
+						}
+					})();
+					</script>
 				</div>
 			</div>
 			<div class="row">

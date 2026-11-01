@@ -516,6 +516,27 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 #fh5co-event {
+	.fh5co-add-to-calendar {
+		display: none;
+		@media screen and (max-width: $screen-sm) {
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			margin-top: 15px;
+			padding: 10px 20px;
+			background: $brand-primary;
+			color: $brand-white;
+			@include border-radius(30px);
+			font-size: 14px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			text-decoration: none;
+			&:hover, &:focus {
+				background: darken($brand-primary, 8%);
+				color: $brand-white;
+			}
+		}
+	}
 	.event-wrap{
 		border: 2px solid rgba($brand-black,.1);
 		background: $brand-white;
