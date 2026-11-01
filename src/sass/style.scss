@@ -430,6 +430,31 @@ h1, h2, h3, h4, h5, h6, figure {
 	}
 }
 
+.fh5co-scroll-down {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 15;
+	color: rgba(255,255,255,.8);
+	font-size: 24px;
+	animation: fh5co-scroll-bounce 2s infinite;
+	&:hover, &:focus {
+		color: rgba(255,255,255,1);
+	}
+}
+@keyframes fh5co-scroll-bounce {
+	0%, 20%, 50%, 80%, 100% {
+		transform: translateX(-50%) translateY(0);
+	}
+	40% {
+		transform: translateX(-50%) translateY(-10px);
+	}
+	60% {
+		transform: translateX(-50%) translateY(-5px);
+	}
+}
+
 .header-photo {
 	position: absolute;
 	top: 50%;
