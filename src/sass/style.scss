@@ -966,7 +966,7 @@ form {
 			display: flex;
 			justify-content: center;
 			width: 100%;
-			padding-left: 15px;
+			padding-left: 25px;
 			margin: clamp(15px, 2vw, 25px) 0 0 !important;
 			@media screen and (max-width: $screen-sm) {
 				margin: calc(clamp(50px, 10vw, 80px) + 55px) 0 0 !important;
