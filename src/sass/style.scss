@@ -446,6 +446,9 @@ h1, h2, h3, h4, h5, h6, figure {
 	&:hover, &:focus {
 		color: rgba(255,255,255,1);
 	}
+	@media screen and (min-width: $screen-sm) {
+		display: none;
+	}
 }
 @keyframes fh5co-scroll-bounce {
 	0%, 20%, 50%, 80%, 100% {
@@ -930,6 +933,9 @@ form {
 		align-items: center;
 		justify-content: center;
 		height: 100%;
+		@media screen and (max-width: $screen-sm) {
+			transform: translateY(-40px);
+		}
 		h1, h2 {
 			margin: 0;
 			padding: 0;
